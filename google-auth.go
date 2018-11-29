@@ -1,4 +1,4 @@
-package auth
+package authenticator
 
 import (
 	"bytes"
@@ -58,7 +58,8 @@ func getHOTPToken(secret string, interval int64) string {
 	return prefix0(otp)
 }
 
-func getTOTPToken(secret string) string {
+// GetTOTPToken ...
+func GetTOTPToken(secret string) string {
 	//The TOTP token is just a HOTP token seeded with every 30 seconds.
 	interval := time.Now().Unix() / 30
 	return getHOTPToken(secret, interval)

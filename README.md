@@ -2,6 +2,10 @@
 
 Generate Google Authentication Codes with golang
 
+```
+go get github.com/maurodelazeri/google-authenticator
+```
+
 ```go
 package main
 
